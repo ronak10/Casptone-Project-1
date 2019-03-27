@@ -3,52 +3,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
 </head>
 <body>
-<h1>Registration Form</h1>
-<form action="Registration" method="post">
-					<table style="with:50">
-					<tr>
-							<td>First Name</td>
-							<td><input type="text" name="first_name"/></td>
-							</tr>
-							
-					<tr>
-							<td>Last Name</td>
-							<td><input type="text" name="last_name"/></td>
-							</tr>
-							
-					<tr>
-							<td>UserName</td>
-							<td><input type="text" name="username"/></td>
-							</tr>
-							
-					<tr>
-							<td>E-Mail ID</td>
-							<td><input type="email" name="emailid"/></td>
-							</tr>
-							
-					<tr>
-							<td>Password</td>
-							<td><input type="password" name="password"/></td>
-							</tr>
-							
-					<tr>
-							<td>Contact No</td>
-							<td><input type="text" name="contact"/></td>
-							</tr>
-							
-					<tr>
-							<td>Address</td>
-							<td><input type="text" name="address"/></td>
-							</tr>
-							
-					<tr>
-							<td>ZipCode</td>
-							<td><input type="text" name="zipcode"/></td>
-							</tr></table>
-							<input type="submit" value="Submit"/></form>
+
+<form action="register_2.jsp">
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+	
+	<label for="name"><b>Full Name</b></label>
+    <input type="text" placeholder="Enter name" name="name" required>
+    
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
+
 </body>
 </html>
